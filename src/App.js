@@ -1,5 +1,6 @@
 
 import React from 'react';
+import './App.css';
 import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './Components/Header/Header';
 import SignUp from './Components/SignUp/SignUp';
@@ -11,9 +12,9 @@ function App() {
 
 
   return (
-    <div>
+    <div className = "app-bg">
 
-      //UserContext will be setup here
+      {/* //UserContext will be setup here */}
       <Router>
         <Header></Header>
         <Switch>
@@ -46,8 +47,8 @@ function App() {
           </Route>
 
 
-          //Private Routing will set up here
-          
+          {/* //Private Routing will set up here
+           */}
 
         </Switch>
       </Router>
