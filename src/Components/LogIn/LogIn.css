@@ -1,7 +1,7 @@
-.singUp-form{
+.form{
     width: 40%;
-    margin: 3% auto;
+    margin: 5% auto;
     background-color: rgb(9, 97, 104);
-    padding: 3% 5% 3% 5%;
+    padding: 3% 5%;
     color: white;
 }

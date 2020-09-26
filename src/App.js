@@ -8,6 +8,8 @@ import About from './Components/About/About';
 import Home from './Components/Home/Home';
 import NoMatch from './Components/NoMatch/NoMatch'
 import Book from './Components/Book/Book'
+import LogIn from './Components/LogIn/LogIn';
+
 function App() {
 
 
@@ -38,13 +40,19 @@ function App() {
             <SignUp></SignUp>
           </Route>
 
+          <Route path = "/logIn">
+            <LogIn></LogIn>
+          </Route>
+
+          <Route path= "/book">
+            <Book></Book>
+          </Route>
+
           <Route path = "*">
             <NoMatch></NoMatch>
           </Route>
 
-          <Route path = "/:bookedPlace">
-            <Book></Book>
-          </Route>
+          
 
 
           {/* //Private Routing will set up here
