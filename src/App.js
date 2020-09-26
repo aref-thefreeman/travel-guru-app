@@ -1,25 +1,55 @@
 
 import React from 'react';
-import {BrowserRouter as Router, Route } from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './Components/Header/Header';
-import LogIn from './Components/Header/LogIn/LogIn';
-import About from './Components/Header/About/About'
+import SignUp from './Components/SignUp/SignUp';
+import About from './Components/About/About';
+import Home from './Components/Home/Home';
+import NoMatch from './Components/NoMatch/NoMatch'
+import Book from './Components/Book/Book'
 function App() {
 
 
   return (
     <div>
+
+      //UserContext will be setup here
       <Router>
         <Header></Header>
-        <switch>
+        <Switch>
+        <Route path exact = "/">
+              <Home></Home>
+          </Route>
+
+          <Route path = "/home">
+              <Home></Home>
+          </Route>
+
+          <Route path exact = "/">
+              <Home></Home>
+          </Route>
+
           <Route path = "/about">
             <About></About>
           </Route>
 
-          <Route path = "/login">
-            <LogIn></LogIn>
+          <Route path = "/SignUp">
+            <SignUp></SignUp>
           </Route>
-        </switch>
+
+          <Route path = "*">
+            <NoMatch></NoMatch>
+          </Route>
+
+          <Route path = "/:bookedPlace">
+            <Book></Book>
+          </Route>
+
+
+          //Private Routing will set up here
+          
+
+        </Switch>
       </Router>
     </div>
   );
