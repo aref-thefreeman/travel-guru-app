@@ -1,0 +1,9 @@
+.hotel-room{
+    background-color: gray;
+    border: 2px solid red;
+}
+
+.hotel-room h2{
+    margin-left: 5%;
+    color: rgb(238, 207, 34);
+}
