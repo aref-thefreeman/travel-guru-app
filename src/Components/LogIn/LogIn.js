@@ -26,10 +26,10 @@ const LogIn = () => {
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block">LogIn</button>
-                <p className="forgot-password text-right">
+                <button type="submit" className="btn btn-warning btn-block">LogIn</button>
+                {/* <p className="forgot-password text-right">
                     Forgot <a href="#">password?</a>
-                </p>
+                </p> */}
             </form>
         
          </div>
