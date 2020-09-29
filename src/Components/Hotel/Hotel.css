@@ -1,9 +1,31 @@
 .hotel-room{
     background-color: gray;
     border: 2px solid red;
+    position: relative;
+    
 }
 
 .hotel-room h2{
     margin-left: 5%;
     color: rgb(238, 207, 34);
+    
+}
+
+.customized-map{
+
+    top: 10%;
+    left: 62%;
+    position: absolute;
+    /* margin-top: -50%;
+    margin-left: 70%; */
+    width: 30%;
+    z-index: 5;
+}
+
+.map-area{
+    /* border: 5px solid red; */
+}
+.map-properties{
+    width: 120%;
+    height: 600px;
 }

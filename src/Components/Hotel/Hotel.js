@@ -8,7 +8,7 @@ const Hotel = () => {
 
     const {hotelId} = useParams();
     const hotelInfo = hotelDetails.find(info => info.id === hotelId);
-    const {id, name } = hotelInfo;
+    const {id, name, destinationMap } = hotelInfo;
 
 
     return (
@@ -17,6 +17,18 @@ const Hotel = () => {
             {
                 hotelInfo.roomDetails.map(room => <Room room= {room} hotelInfo = {hotelInfo}> </Room>)
             }
+            
+            
+            <div className = "customized-map">
+                    <div className = "map-area">
+           
+                    <iframe className = "map-properties" src={`https://maps.google.com/maps?q=${destinationMap}&t=&z=13&ie=UTF8&iwloc=&output=embed`}></iframe>
+                    </div>
+            </div>
+
+            {/* <img src={`https://maps.google.com/maps?q=${destinationMap}&t=&z=13&ie=UTF8&iwloc`} alt=""/> */}
+
+           
 
         </div>
     );
