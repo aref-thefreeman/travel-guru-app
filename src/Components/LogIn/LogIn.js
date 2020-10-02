@@ -157,13 +157,13 @@ function LogIn() {
       // var user = result.user;
 
 
-      const {displayName,email,photoURL} = result.user
+      const {displayName} = result.user
       const signedInUser = {
         isLoggedIn : true,
         name : displayName ,
         email : "anyone@gamil.com",
         photo: "",
-        
+
       }
       setUser(signedInUser); 
       setLoggedInUser(signedInUser);  
