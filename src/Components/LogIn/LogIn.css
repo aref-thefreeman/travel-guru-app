@@ -5,3 +5,14 @@
     padding: 3% 5%;
     color: white;
 }
+
+.logInForm{
+    background-color: rgb(103, 112, 117);
+    height: 100vh;
+    border: 4px solid red;
+}
+
+.logInForm-inner{
+    margin-top: 10%;
+    margin-left: 10%;
+}

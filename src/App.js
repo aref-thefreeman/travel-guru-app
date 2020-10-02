@@ -3,13 +3,14 @@ import React,{ createContext, useState } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './Components/Header/Header';
-import SignUp from './Components/SignUp/SignUp';
+// import SignUp from './Components/SignUp/SignUp';
 import About from './Components/About/About';
 import Home from './Components/Home/Home';
 import NoMatch from './Components/NoMatch/NoMatch'
 import Book from './Components/Book/Book'
 import LogIn from './Components/LogIn/LogIn';
 import Hotel from './Components/Hotel/Hotel';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext()
 
@@ -21,6 +22,13 @@ function App() {
   return (
     <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
       <div className = "">
+
+        
+        {/* {
+          loggedInUser.isLoggedIn ? <h4 style = {{color: "green"}}>{loggedInUser.name}</h4>  : <h4>You are visiting this site as Guest</h4>
+        } */}
+       
+  
 
 {/* //UserContext will be setup here */}
 <Router>
@@ -42,9 +50,9 @@ function App() {
       <About></About>
     </Route>
 
-    <Route path = "/SignUp">
+    {/* <Route path = "/SignUp">
       <SignUp></SignUp>
-    </Route>
+    </Route> */}
 
     <Route path = "/logIn">
       <LogIn></LogIn>
@@ -54,10 +62,9 @@ function App() {
       <Book></Book>
     </Route>
 
-    <Route path = "/hotel/:hotelId">
+    <PrivateRoute path = "/hotel/:hotelId">
       <Hotel></Hotel>
-
-    </Route>
+    </PrivateRoute>
 
     <Route path = "*">
       <NoMatch></NoMatch>

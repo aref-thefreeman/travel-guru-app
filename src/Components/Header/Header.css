@@ -32,9 +32,9 @@
 
 .logIn-button{
     
-    margin: 30%;
+    margin-top: 30%;
     margin-left: 50%;
-    padding: 0% 6%;
+    /* padding: 0% 6%; */
     background-color: rgb(167, 54, 59);
     /* border-radius: 20px; */
     color: white;
